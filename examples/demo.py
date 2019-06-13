@@ -24,7 +24,6 @@ automodel = ak.GraphAutoModel(inputs=inputs, outputs=outputs)
 automodel.fit(x_train, y_train)
 
 # Advanced
-
 inputs = ak.ImageInput(shape=(28, 28, 1))
 outputs1 = ak.ResNetBlock()(inputs)
 outputs2 = ak.XceptionBlock()(inputs)
@@ -36,6 +35,7 @@ automodel = ak.GraphAutoModel(inputs=inputs, outputs=outputs)
 
 learning_rate = 1.0
 
+# The user can also specify kwargs for keras fit function, e.g., epochs, callbacks.
 automodel.fit(x_train, y_train,
               trials=100,
               epochs=200,
