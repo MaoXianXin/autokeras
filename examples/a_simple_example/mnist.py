@@ -12,3 +12,4 @@ if __name__ == '__main__':
     y = clf.evaluate(x_test, y_test)
 
     print(y * 100)
+    clf.export_autokeras_model('my_model-1.h5')
